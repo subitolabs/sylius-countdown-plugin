@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: Subitolabs\SyliusCountdownPlugin
+        psr4_prefix: Subitolabs\SyliusCountdownPlugin

@@ -1,0 +1,47 @@
+sylius_grid:
+    grids:
+        subitolabs_countdown_schedule_admin:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%subitolabs_countdown_plugin.model.schedule.class%"
+            fields:
+                code:
+                    type: twig
+                    label: sylius.ui.code
+                    path: .
+                    sortable: code
+                    options:
+                        template: "@SyliusAdmin/Channel/Grid/Field/code.html.twig"
+                enabled:
+                    type: twig
+                    label: sylius.ui.enabled
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/Grid/Field/enabled.html.twig"
+                startsAt:
+                    type: datetime
+                    label: sylius.ui.date
+                    path: startsAt
+                    sortable: startsAt
+                    options:
+                        format: d-m-Y H:i:s
+                endsAt:
+                    type: datetime
+                    label: sylius.ui.date
+                    path: endsAt
+                    sortable: endsAt
+                    options:
+                        format: d-m-Y H:i:s
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+                bulk:
+                    delete:
+                        type: delete

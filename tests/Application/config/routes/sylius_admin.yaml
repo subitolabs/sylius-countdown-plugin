@@ -1,0 +1,7 @@
+sylius_admin:
+    resource: "@SyliusAdminBundle/Resources/config/routing.yml"
+    prefix: /admin
+
+subitolabs_sylius_example_admin:
+    resource: "@SubitolabsSyliusCountdownPlugin/config/routes/admin.yaml"
+    prefix: /admin

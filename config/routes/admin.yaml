@@ -1,0 +1,13 @@
+subitolabs_countdown_plugin_admin_schedule_index:
+    resource: |
+        alias: subitolabs_countdown_plugin.schedule
+        section: admin
+        permission: true
+        templates: "@SyliusAdmin\\Crud"
+        only: [index, create, update, delete, bulkDelete]
+        redirect: index
+        grid: subitolabs_countdown_schedule_admin
+        vars:
+            index:
+                icon: 'sitemap'
+    type: sylius.resource
