@@ -1,10 +1,12 @@
 {
+    "name": "subitolabs/sylius-countdown-plugin",
     "type": "sylius-plugin",
     "keywords": [
         "sylius",
         "sylius-plugin"
     ],
     "license": "proprietary",
+    "description": "Display a count down in your shop, highly customizable",
     "require": {
         "php": "^8.1",
         "sylius/sylius": "~1.13.0",
