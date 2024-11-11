@@ -4,14 +4,12 @@ declare(strict_types=1);
 
 namespace Subitolabs\SyliusCountdownPlugin\DependencyInjection;
 
-use JetBrains\PhpStorm\NoReturn;
 use Sylius\Bundle\CoreBundle\DependencyInjection\PrependDoctrineMigrationsTrait;
 use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
-use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 final class SubitolabsSyliusCountdownExtension extends AbstractResourceExtension implements PrependExtensionInterface
@@ -26,7 +24,7 @@ final class SubitolabsSyliusCountdownExtension extends AbstractResourceExtension
         $loader->load('services.yaml');
     }
 
-    #[NoReturn] public function prepend(ContainerBuilder $container): void
+    public function prepend(ContainerBuilder $container): void
     {
         $config = $this->getCurrentConfiguration($container);
 

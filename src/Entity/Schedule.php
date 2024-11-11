@@ -37,8 +37,8 @@ class Schedule implements ScheduleInterface
     protected int $priority = 0;
 
     #[ORM\Column(type: Types::BOOLEAN)]
+    // @phpstan-ignore-next-line
     protected $enabled = true;
-
 
     public function getId(): ?int
     {
