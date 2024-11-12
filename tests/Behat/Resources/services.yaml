@@ -1,0 +1,20 @@
+services:
+
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Tests\Subitolabs\SyliusCountdownPlugin\Behat\:
+        resource: '..'
+        
+    Tests\Subitolabs\SyliusCountdownPlugin\Behat\Page\Admin\ScheduleIndexPage:
+        public: false
+        parent: sylius.behat.page.admin.crud.index
+        arguments:
+            - subitolabs_countdown_plugin_admin_schedule_index
+                
+    Tests\Subitolabs\SyliusCountdownPlugin\Behat\Page\Admin\ScheduleCreatePage:
+        public: false
+        parent: sylius.behat.page.admin.crud.create
+        arguments:
+            - subitolabs_countdown_plugin_admin_schedule_create
