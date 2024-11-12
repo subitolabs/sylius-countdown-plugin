@@ -2,9 +2,12 @@
 
 default:
     suites:
-        greeting_customer:
+        admin_managing_schedules:
             contexts:
-                - subitolabs_sylius_example.context.ui.shop.welcome
+                - sylius.behat.context.hook.doctrine_orm
+                - sylius.behat.context.setup.channel
+                - sylius.behat.context.setup.admin_security
+                - Tests\Subitolabs\SyliusCountdownPlugin\Behat\Context\Ui\Admin\ScheduleContext
 
             filters:
-                tags: "@greeting_customer"
+                tags: "@admin_managing_schedules"
